@@ -24,8 +24,12 @@
                                 <color key="textColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="8Bk-4h-2bx">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="8Bk-4h-2bx">
                                 <rect key="frame" x="14" y="363" width="386" height="100"/>
+                                <color key="tintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="tOG-r9-p8P"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0°F" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mGf-xi-S3B">
                                 <rect key="frame" x="167" y="161" width="80" height="59"/>
@@ -90,6 +94,11 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="celsiusLabel" destination="HL5-Ny-yOc" id="S69-oX-9Aa"/>
+                        <outlet property="fahrenheitLabel" destination="mGf-xi-S3B" id="wPo-u2-t18"/>
+                        <outlet property="slider" destination="8Bk-4h-2bx" id="h9f-VF-r1g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
