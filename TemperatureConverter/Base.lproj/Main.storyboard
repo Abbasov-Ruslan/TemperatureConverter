@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,93 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TemperatureConverter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="So Hot" translatesAutoresizingMaskIntoConstraints="NO" id="VIj-nl-X8T">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TempConverter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eKF-ie-hpy">
+                                <rect key="frame" x="94" y="20" width="226" height="38"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="33"/>
+                                <color key="textColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="8Bk-4h-2bx">
+                                <rect key="frame" x="14" y="363" width="386" height="100"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0°F" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mGf-xi-S3B">
+                                <rect key="frame" x="167" y="161" width="80" height="59"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="51"/>
+                                <color key="textColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0°C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HL5-Ny-yOc">
+                                <rect key="frame" x="164" y="256" width="86" height="59"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="51"/>
+                                <color key="textColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="HL5-Ny-yOc" firstAttribute="top" secondItem="mGf-xi-S3B" secondAttribute="bottom" constant="36" id="6d0-g3-ToV"/>
+                            <constraint firstItem="8Bk-4h-2bx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="CBJ-A0-hww"/>
+                            <constraint firstItem="eKF-ie-hpy" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="LVk-yA-0F4"/>
+                            <constraint firstItem="8Bk-4h-2bx" firstAttribute="centerX" secondItem="VIj-nl-X8T" secondAttribute="centerX" id="TJZ-pU-Yok"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8Bk-4h-2bx" secondAttribute="trailing" constant="16" id="Ufo-LU-yNS"/>
+                            <constraint firstItem="VIj-nl-X8T" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="WRY-Rd-Yne"/>
+                            <constraint firstItem="VIj-nl-X8T" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="X7F-mV-hEb"/>
+                            <constraint firstItem="mGf-xi-S3B" firstAttribute="centerX" secondItem="VIj-nl-X8T" secondAttribute="centerX" id="fHz-91-Uqb"/>
+                            <constraint firstItem="HL5-Ny-yOc" firstAttribute="centerX" secondItem="VIj-nl-X8T" secondAttribute="centerX" id="flR-ZX-vQI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="8Bk-4h-2bx" secondAttribute="bottom" constant="274" id="n5E-2w-c3o"/>
+                            <constraint firstItem="mGf-xi-S3B" firstAttribute="top" secondItem="eKF-ie-hpy" secondAttribute="bottom" constant="103" id="org-GO-49H"/>
+                            <constraint firstItem="eKF-ie-hpy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="p0V-27-w3M"/>
+                            <constraint firstItem="8Bk-4h-2bx" firstAttribute="top" secondItem="HL5-Ny-yOc" secondAttribute="bottom" constant="48" id="v1k-st-1vk"/>
+                            <constraint firstItem="VIj-nl-X8T" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" id="xAf-qC-4yo"/>
+                            <constraint firstItem="VIj-nl-X8T" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="zKE-fN-ab6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Ufo-LU-yNS"/>
+                                <exclude reference="n5E-2w-c3o"/>
+                                <exclude reference="LVk-yA-0F4"/>
+                                <exclude reference="p0V-27-w3M"/>
+                                <exclude reference="fHz-91-Uqb"/>
+                                <exclude reference="org-GO-49H"/>
+                                <exclude reference="6d0-g3-ToV"/>
+                                <exclude reference="flR-ZX-vQI"/>
+                                <exclude reference="CBJ-A0-hww"/>
+                                <exclude reference="TJZ-pU-Yok"/>
+                                <exclude reference="v1k-st-1vk"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="Ufo-LU-yNS"/>
+                                <include reference="n5E-2w-c3o"/>
+                                <include reference="LVk-yA-0F4"/>
+                                <include reference="p0V-27-w3M"/>
+                                <include reference="fHz-91-Uqb"/>
+                                <include reference="org-GO-49H"/>
+                                <include reference="6d0-g3-ToV"/>
+                                <include reference="flR-ZX-vQI"/>
+                                <include reference="CBJ-A0-hww"/>
+                                <include reference="TJZ-pU-Yok"/>
+                                <include reference="v1k-st-1vk"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="127.28635682158921"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="So Hot" width="138" height="245.33332824707031"/>
+    </resources>
 </document>
